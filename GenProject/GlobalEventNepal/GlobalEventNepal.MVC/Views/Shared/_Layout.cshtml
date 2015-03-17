@@ -1,0 +1,47 @@
+﻿@using System.Web.Optimization
+@using GlobalEventNepal.Resource
+@{
+    ViewBag.Title = "List";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <link rel="icon" href="/favicon.ico">
+        
+        <title>@ViewBag.Title</title>
+        @Styles.Render("~/Content/css")
+        
+        
+    </head>
+    <body>
+        <div>
+            <!---NAV BAR --->
+            @Html.Partial("_NavBar")
+
+            <!---MAIN CONTENT --->
+            <div>
+                @RenderBody()
+            </div>
+            <hr class="featurette-divider">
+
+            <!---FOOTER --->
+            <footer>
+                <p class="pull-right">
+                    <a href="#">@Content.BackToTop</a>
+                </p>
+                <p>
+                    &copy; 2014 @Content.GlobalEventNepalCompany &middot; 
+                    <a href="#">@Content.PrivacyPolicy</a> &middot; 
+                    <a href="#">@Content.TermsOfUse</a>
+                </p>
+            </footer>
+        </div>
+        @Scripts.Render("~/bundles/jquery")
+         @Scripts.Render("~/bundles/site")
+    </body>
+</html>

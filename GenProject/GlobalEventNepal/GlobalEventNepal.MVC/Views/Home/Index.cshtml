@@ -1,0 +1,39 @@
+﻿@using GlobalEventNepal.Resource
+@model GlobalEventNepal.MVC.Models.EventListViewModel
+
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("_Carousel", Model.Events)
+<hr class="featurette-divider">
+<div class="container marketing">
+    <div class="row">
+        <div class="col-lg-4 leftContent">
+            Left Content
+        </div>
+        <div class="col-lg-4" id="UpcomingEvents">
+            <h4>@Content.UpcomingEvents</h4>
+            @Html.Partial("_ListOfEvents", Model)
+        </div>
+        <div class="col-lg-4 rightContent">
+            <div id="eventCalendarDefault">
+            </div>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">@Content.CreateManageMarketText</h2>
+            <p class="lead">@Content.HomePageBottomText</p>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" src="/Images/SlideImage2.jpg" alt="Generic placeholder image">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+</div>
+

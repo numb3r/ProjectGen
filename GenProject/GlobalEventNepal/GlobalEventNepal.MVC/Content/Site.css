@@ -1,0 +1,162 @@
+﻿.navbar-wrapper {
+  margin-top: 4px;
+}
+
+
+/*Carousel*/
+
+.carousel-inner {
+    left: 9%;
+    width: 82%;
+    height: 84%;
+    top: 15%;
+}
+
+.carousel-caption {
+    bottom: 90px;
+}
+
+#myCarousel {
+    margin-bottom: 15px;
+}
+
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+    margin-right: -75px;
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+    margin-left: -75px;
+}
+
+.carousel-indicators li {
+    border-color: blue;
+}
+
+/*end Carousel*/
+
+/*Common Styles*/
+.featurette-divider {
+    margin: 10px;
+}
+
+#FeaturedEvents {
+    left: 36px;
+    right: auto;
+    text-align: center;
+    margin-top: 10px;
+     background: none;
+}
+
+    #FeaturedEvents .col-lg-4 {
+        border: 3px solid blue;
+        width: 30%;
+        margin-right: 20px;
+        padding-top: 15px;
+        border-style: outset;
+    }
+
+
+.img-circle {
+    border-radius: 0;
+    width: 277px;
+    height: 140px;
+}
+
+.col-lg-5, .col-lg-7 {
+    height: 281px;
+}
+
+.featurette-heading {
+    margin-top: 20px;
+}
+
+.container .col-lg-4 {
+        border: solid 1px #d3d3d3;
+        box-shadow: 0 0 15px #999;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        background-color: #fff;
+        color: #807E7E;
+        height: 430px;
+    }
+
+    .container .leftContent {
+        width: 20%;
+    }
+
+    .container #UpcomingEvents {
+        width: 50%; 
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+        .container #UpcomingEvents h4:first-child {
+            font-style: italic;
+            text-decoration: underline; 
+            margin-top: 10px;
+            margin-bottom: 12px;
+    }
+
+        .container #UpcomingEvents  #EventSummary p {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .container #UpcomingEvents  #EventSummary h4 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+    .container .rightContent {
+        width: 26%;
+    }
+
+/*.eventCalenderDefault .eventsCalendar-monthWrap {
+    width: 326px;
+}*/
+
+/*Pagination for Event List*/
+div .pager {
+    text-align: right;
+    border-top: 2px solid silver;
+    padding: .5em 0 0 0;
+    margin-top: 1em;
+}
+
+    div .pager a {
+        font-size: 1.1em;
+        color: #666;
+        text-decoration: none;
+        padding: 0 .4em 0 .4em;
+    }
+
+    div .pager a:hover {
+        background-color: silver;
+    }
+
+    div.pager a.selected {
+        background-color: #353535;
+        color: white;
+    }
+    
+/* Category Links*/
+div .leftContent a {
+    font:bold 1.1em "Arial Narrow", "Franklin Gothic Medium", Arial;
+    display: block;
+    text-decoration: none;
+    padding: .6em;
+    color: black;
+}
+
+div .leftContent a.selected {
+    background-color: #666;
+    color: white;
+}
+
+div .leftContent a:hover {
+    background-color: #CCC;
+}
+
+div .leftContent a.selected:hover {
+    background-color: #666;
+}

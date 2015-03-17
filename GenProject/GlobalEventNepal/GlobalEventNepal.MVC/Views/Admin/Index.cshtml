@@ -1,0 +1,41 @@
+﻿@using GlobalEventNepal.Resource
+@model IEnumerable<GlobalEventNepal.Domain.Entities.Event>
+
+@{
+    ViewBag.Title = "Admin: All Events";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h2>@Content.AllEvents</h2>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EventName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Organization)
+        </th>
+        <th>@Content.Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.ActionLink(item.EventName, "Edit", new { item.Id })</td>
+            <td>@item.Category</td>
+            <td> @item.Organization</td>
+            <td>
+            @using (Html.BeginForm("Delete", "Admin"))
+            {
+                @Html.Hidden("Id", item.Id)
+                <input type="submit" value="Delete"/>
+            }            
+        </tr>
+    }
+</table>
+<p>@Html.ActionLink("Add a new Event", "Create")</p>

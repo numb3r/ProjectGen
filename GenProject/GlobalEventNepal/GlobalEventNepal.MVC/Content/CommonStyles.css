@@ -1,0 +1,15 @@
+﻿body {
+    width: auto;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.leftText {
+    text-align: left;
+}
+
+.inlineBlock {
+    display: inline-block;
+}

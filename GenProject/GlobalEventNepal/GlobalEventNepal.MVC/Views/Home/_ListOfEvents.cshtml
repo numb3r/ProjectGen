@@ -1,0 +1,10 @@
+﻿@model GlobalEventNepal.MVC.Models.EventListViewModel
+
+@foreach (var p in Model.Events)
+{
+    Html.RenderPartial("_EventSummary", p);
+}
+
+<div class="pager">
+    @Html.PageLinks(Model.PagingInfo, x=> Url.Action("List", new{page = x}))
+</div>
