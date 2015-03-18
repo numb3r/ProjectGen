@@ -7,7 +7,26 @@
 
 <h1>Edit @Model.EventName</h1>
 @using (Html.BeginForm()) {
-    @Html.EditorForModel()
-    <input type="submit" value="Save" />
-    @Html.ActionLink("Cancel and return to List", "Index")
+    <fieldset>
+
+        <div>
+            <div class="editor-label label label-default">
+                @Html.LabelFor(model => model.Id)
+            </div>
+            <div>
+                @Html.TextBoxFor(model => model.Id, new { @class = "input-group input-group-lg col-lg-4", type = "text" })
+                @if (ViewData.ModelState.IsValid)
+                {
+                    @Html.ValidationMessageFor(model => model.Id)
+                }
+            </div>
+        </div>
+
+        @Html.Partial("~/Views/Admin/EventList.cshtml")
+        <div class="btn-group col-lg-4">
+            <button class="btn btn-default col-lg-4" type="submit" value="Save">Create</button>
+            <a class="btn btn-default col-lg-4" href="~/Admin/">Cancel</a>
+        </div>
+        
+    </fieldset>
 }
