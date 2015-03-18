@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Web.Mvc;
 using System.Web.Routing;
+using GlobalEventNepal.Domain;
 using GlobalEventNepal.Domain.Abstract;
 using GlobalEventNepal.Domain.Concrete;
 using GlobalEventNepal.Domain.Entities;
@@ -28,16 +30,11 @@ namespace GlobalEventNepal.MVC.Infrastructure
         }
         private void AddBindings()
         {
-            //Mock<IEventRepository> mock = new Mock<IEventRepository>();
-            //mock.Setup(m => m.Events).Returns(new List<Event>
-            //{
-            //    new Event { EventName = "Test Event", Category = "Test Category", Description = "Test Description", Starts = new DateTime(), Ends = new DateTime(), Location = "test location", Organization = "test organization"},
-            //    new Event{ EventName = "Test1 Event", Category = "Test1 Category", Description = "Test1 Description", Starts = new DateTime(), Ends = new DateTime(), Location = "test1 location", Organization = "test1 organization"},
-            //    new Event{ EventName = "Test2 Event", Category = "Test2 Category", Description = "Test2 Description", Starts = new DateTime(), Ends = new DateTime(), Location = "test2 location", Organization = "test2 organization"},
-            //}.AsQueryable());
+            //Binding the ObjectContext
+            ninjectKernel.Bind<IObjectContextAdapter>().To<GlobalEventNepalContext>();
 
-            //ninjectKernel.Bind<IEventRepository>().ToConstant(mock.Object);
-            ninjectKernel.Bind<IEventRepository>().To<EventRepository>();
+            //Unit of Work Binding
+            ninjectKernel.Bind<IEventUnitOfWork>().To<EventUnitOfWork>();
         }
     }
 }

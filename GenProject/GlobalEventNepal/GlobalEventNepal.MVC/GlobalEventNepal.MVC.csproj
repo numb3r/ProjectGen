@@ -134,7 +134,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Extensions\PagingHelpers.cs" />
     <Compile Include="Global.asax.cs">
@@ -261,9 +260,7 @@
     <Content Include="Views\Home\_ListOfEvents.cshtml" />
     <Content Include="Views\Home\_ListOfFeaturedEvents.cshtml" />
     <Content Include="Views\Shared\_EventSummary.cshtml" />
-    <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
-    <Content Include="Views\Admin\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
