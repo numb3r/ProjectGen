@@ -1,5 +1,4 @@
-﻿
-@model GlobalEventNepal.Domain.Entities.Event
+﻿@model GlobalEventNepal.Domain.Entities.Event
 
 @{
     ViewBag.Title = "Create";
@@ -7,80 +6,112 @@
 
 <h2>Create</h2>
 
-@using (Html.BeginForm()) {
+@using (Html.BeginForm())
+{
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
         <legend>Event</legend>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.EventName)
+        <div>
+            <div class="editor-label label label-default">
+                @Html.LabelFor(model => model.EventName)
+            </div>
+            <div>
+                @Html.TextBoxFor(model => model.EventName, new { @class = "input-group input-group-lg col-lg-4", type = "text" })
+                @if (ViewData.ModelState.IsValid)
+                {
+                    @Html.ValidationMessageFor(model => model.EventName)
+                }
+            </div>
         </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.EventName)
-            @Html.ValidationMessageFor(model => model.EventName)
+        <div>
+            <div class="editor-label label label-default">
+                @Html.LabelFor(model => model.Category)
+            </div>
+            <div>
+                @Html.TextBoxFor(model => model.Category, new { @class = "input-group input-group-lg col-lg-4", type = "text" })
+                @if (ViewData.ModelState.IsValid)
+                {
+                    @Html.ValidationMessageFor(model => model.Category)
+                }
+            </div>
         </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Category)
+        <div>
+            <div class="editor-label label label-default">
+                @Html.LabelFor(model => model.Organization)
+            </div>
+            <div>
+                @Html.TextBoxFor(model => model.Organization, new { @class = "input-group input-group-lg col-lg-4", type = "text" })
+                @if (ViewData.ModelState.IsValid)
+                {
+                    @Html.ValidationMessageFor(model => model.Organization)
+                }
+            </div>
         </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Category)
-            @Html.ValidationMessageFor(model => model.Category)
+        <div>
+            <div class="editor-label label label-default">
+                @Html.LabelFor(model => model.Starts)
+            </div>
+            <div>
+                @Html.TextBoxFor(model => model.Starts, new { @class = "input-group input-group-lg col-lg-4", type = "datetime-local" })
+                @if (ViewData.ModelState.IsValid)
+                {
+                    @Html.ValidationMessageFor(model => model.Starts)
+                }
+            </div>
         </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Organization)
+        <div>
+            <div class="editor-label label label-default">
+                @Html.LabelFor(model => model.Ends)
+            </div>
+            <div>
+                @Html.TextBoxFor(model => model.Ends, new { @class = "input-group input-group-lg col-lg-4", type = "datetime-local" })
+                @if (ViewData.ModelState.IsValid)
+                {
+                    @Html.ValidationMessageFor(model => model.Ends)
+                }
+            </div>
         </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Organization)
-            @Html.ValidationMessageFor(model => model.Organization)
+        <div>
+            <div class="editor-label label label-default">
+                @Html.LabelFor(model => model.Location)
+            </div>
+            <div>
+                @Html.TextBoxFor(model => model.Location, new { @class = "input-group input-group-lg col-lg-4", type = "text" })
+                @if (ViewData.ModelState.IsValid)
+                {
+                    @Html.ValidationMessageFor(model => model.Location)
+                }
+            </div>
         </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Starts)
+        <div>
+            <div class="editor-label label label-default">
+                @Html.LabelFor(model => model.Description)
+            </div>
+            <div>
+                @Html.TextBoxFor(model => model.Description, new { @class = "input-group input-group-lg col-lg-4", type = "text" })
+                @if (ViewData.ModelState.IsValid)
+                {
+                    @Html.ValidationMessageFor(model => model.Description)
+                }
+            </div>
         </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Starts)
-            @Html.ValidationMessageFor(model => model.Starts)
+        <div>
+            <div class="editor-label label label-default">
+                @Html.LabelFor(model => model.Price)
+            </div>
+            <div>
+                @Html.TextBoxFor(model => model.Price, new { @class = "input-group input-group-lg col-lg-4", type = "text" })
+                @if (ViewData.ModelState.IsValid)
+                {
+                    @Html.ValidationMessageFor(model => model.Price)
+                }
+            </div>
         </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Ends)
+        <div class="btn-group col-lg-4">
+            <button class="btn btn-default col-lg-4" type="submit" value="Create">Create</button>
+            <a class="btn btn-default col-lg-4"  href="~/Admin/">Cancel</a>
         </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Ends)
-            @Html.ValidationMessageFor(model => model.Ends)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Location)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Location)
-            @Html.ValidationMessageFor(model => model.Location)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Description)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Description)
-            @Html.ValidationMessageFor(model => model.Description)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Price)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Price)
-            @Html.ValidationMessageFor(model => model.Price)
-        </div>
-
-        <p>
-            <input type="submit" value="Create" />
-            @Html.ActionLink("Cancel and return to List", "Index")
-        </p>
     </fieldset>
 }
