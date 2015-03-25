@@ -4,9 +4,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace GlobalEventNepal.Domain.Entities
 {
-    public class Event
+    public class Event : DataItem
     {
-        public Guid Id { get; set; }
+        public override Guid Id { get; set; }
+
+        public Guid ContactId { get; set; }
 
         public string EventName { get; set; }
 

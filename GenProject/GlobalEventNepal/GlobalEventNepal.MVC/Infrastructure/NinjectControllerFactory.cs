@@ -5,8 +5,6 @@ using System.Linq;
 using System.Web.Mvc;
 using System.Web.Routing;
 using GlobalEventNepal.Domain;
-using GlobalEventNepal.Domain.Abstract;
-using GlobalEventNepal.Domain.Concrete;
 using GlobalEventNepal.Domain.Entities;
 using Moq;
 using Ninject;
@@ -34,7 +32,7 @@ namespace GlobalEventNepal.MVC.Infrastructure
             ninjectKernel.Bind<IObjectContextAdapter>().To<GlobalEventNepalContext>();
 
             //Unit of Work Binding
-            ninjectKernel.Bind<IEventUnitOfWork>().To<EventUnitOfWork>();
+            //ninjectKernel.Bind<IEventUnitOfWork>().To<EventUnitOfWork>();
         }
     }
 }

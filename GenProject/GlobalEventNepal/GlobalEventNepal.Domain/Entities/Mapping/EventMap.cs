@@ -12,7 +12,6 @@ namespace GlobalEventNepal.Domain.Entities.Mapping
             Property(p => p.Organization).HasMaxLength(25);
             Property(p => p.Description).HasMaxLength(100);
 
-            HasOptional(p => p.Contact).WithMany().Map(m => m.MapKey("ContactId"));
             ToTable("Events");
         }
     }

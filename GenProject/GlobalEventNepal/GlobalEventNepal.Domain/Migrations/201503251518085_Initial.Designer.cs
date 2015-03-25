@@ -7,13 +7,13 @@ namespace GlobalEventNepal.Domain.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class CreatedTables : IMigrationMetadata
+    public sealed partial class Initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CreatedTables));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201503180531571_CreatedTables"; }
+            get { return "201503251518085_Initial"; }
         }
         
         string IMigrationMetadata.Source

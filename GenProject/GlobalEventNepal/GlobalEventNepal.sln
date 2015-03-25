@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalEventNepal.MVC", "GlobalEventNepal.MVC\GlobalEventNepal.MVC.csproj", "{B6D628BD-2899-4949-BBCF-BB936FCF8806}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalEventNepal.MVC.Tests", "GlobalEventNepal.MVC.Tests\GlobalEventNepal.MVC.Tests.csproj", "{21C5C90F-A27A-4F03-AD55-4896A8CC3D9E}"
@@ -8,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalEventNepal.Domain", "GlobalEventNepal.Domain\GlobalEventNepal.Domain.csproj", "{DC1A27E0-04EF-4C74-8565-3F2E2E3BB6E0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalEventNepal.Resource", "GlobalEventNepal.Resource\GlobalEventNepal.Resource.csproj", "{CA677320-ECA4-4577-9EA4-07F663A83CBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalEventNepal.Domain.Services", "GlobalEventNepal.Domain.Services\GlobalEventNepal.Domain.Services.csproj", "{63B2436B-0ACC-4960-97C0-DDE94796EDC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,10 @@ Global
 		{CA677320-ECA4-4577-9EA4-07F663A83CBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA677320-ECA4-4577-9EA4-07F663A83CBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA677320-ECA4-4577-9EA4-07F663A83CBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63B2436B-0ACC-4960-97C0-DDE94796EDC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63B2436B-0ACC-4960-97C0-DDE94796EDC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63B2436B-0ACC-4960-97C0-DDE94796EDC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63B2436B-0ACC-4960-97C0-DDE94796EDC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

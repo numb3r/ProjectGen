@@ -3,7 +3,6 @@ using System.Collections;
 using System.Linq;
 using System.Web.Mvc;
 using GlobalEventNepal.Domain;
-using GlobalEventNepal.Domain.Abstract;
 using GlobalEventNepal.Domain.Entities;
 using GlobalEventNepal.MVC.Models;
 

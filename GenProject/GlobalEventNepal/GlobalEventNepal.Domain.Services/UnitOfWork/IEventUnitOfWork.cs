@@ -1,7 +1,7 @@
 ﻿using System;
 using GlobalEventNepal.Domain.Entities;
 
-namespace GlobalEventNepal.Domain.Abstract
+namespace GlobalEventNepal.Domain.Services.UnitOfWork
 {
     public interface IEventUnitOfWork: IDisposable
     {
