@@ -8,7 +8,7 @@ namespace GlobalEventNepal.Domain.Services.UnitOfWork
 {
     public interface IContactUnitOfWork
     {
-        IQueryable<Contact> GeAll();
+        IQueryable<Contact> GetAll();
         Contact Create(Contact entity);
         Contact UpdateIfExistsElseInsert(Contact update);
         void DeleteContact(Guid id);

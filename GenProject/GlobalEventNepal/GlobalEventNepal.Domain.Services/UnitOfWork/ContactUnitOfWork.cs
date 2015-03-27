@@ -20,7 +20,7 @@ namespace GlobalEventNepal.Domain.Services.UnitOfWork
             context = iContext.ObjectContext;
             contactRepository = new EFRepository<Contact>(iContext);
         }
-        public IQueryable<Contact> GeAll()
+        public IQueryable<Contact> GetAll()
         {
             return contactRepository.GetAll().OfType<Contact>();
         }
