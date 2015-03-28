@@ -8,6 +8,7 @@ using GlobalEventNepal.Domain;
 using GlobalEventNepal.Domain.Entities;
 using Moq;
 using Ninject;
+using GlobalEventNepal.Domain.Services.UnitOfWork;
 
 namespace GlobalEventNepal.MVC.Infrastructure
 {
@@ -32,7 +33,7 @@ namespace GlobalEventNepal.MVC.Infrastructure
             ninjectKernel.Bind<IObjectContextAdapter>().To<GlobalEventNepalContext>();
 
             //Unit of Work Binding
-            ninjectKernel.Bind<IRepository>().To<EFRepository>();
+            ninjectKernel.Bind<IEventUnitOfWork>().To<EventUnitOfWork>();
         }
     }
 }
