@@ -1,11 +1,11 @@
-<<<<<<< HEAD
 ﻿using System;
-=======
 ﻿using GlobalEventNepal.Domain.Services.App_Start;
 using GlobalEventNepal.Domain.Services.DependencyInjection;
 using Ninject;
 using System;
->>>>>>> e5dabf91d2f1a4f47facbeaddab054328fc6aa54
+using System.Web.Mvc;
+using System.Web.Http;
+using System.Web.Routing;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,16 +21,13 @@ namespace GlobalEventNepal.Domain.Services
     {
         protected void Application_Start()
         {
-<<<<<<< HEAD
-            AreaRegistration.RegisterAllAreas();
 
-=======
+            AreaRegistration.RegisterAllAreas();
             IKernel kernel = new StandardKernel();
             GlobalConfiguration.Configuration.DependencyResolver = new NinjectResolver(kernel);
 
             AreaRegistration.RegisterAllAreas();
             DIConfig.RegisterBindings(kernel);
->>>>>>> e5dabf91d2f1a4f47facbeaddab054328fc6aa54
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

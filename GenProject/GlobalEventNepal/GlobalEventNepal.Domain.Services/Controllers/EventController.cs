@@ -20,12 +20,12 @@ namespace GlobalEventNepal.Domain.Services.Controllers
             eventUnitOfWork = iEventUnitOfWork;
         }
 
-        public override IQueryable<Event> Get()
+        public  IQueryable<Event> Get()
         {
             return eventRepository.GetAll();
         }
 
-        public override HttpResponseMessage Post(Event entity)
+        public  HttpResponseMessage Post(Event entity)
         {
             if (!ModelState.IsValid) return new HttpResponseMessage(HttpStatusCode.BadRequest);
 
@@ -36,7 +36,7 @@ namespace GlobalEventNepal.Domain.Services.Controllers
             return response;
         }
 
-        public override HttpResponseMessage Put(Guid key, Event update)
+        public  HttpResponseMessage Put(Guid key, Event update)
         {
             if (!ModelState.IsValid) 
                 return new HttpResponseMessage(HttpStatusCode.BadRequest);
@@ -50,7 +50,7 @@ namespace GlobalEventNepal.Domain.Services.Controllers
         }
 
         //void returns an empty 204 status (No Content)
-        public override void Delete(Guid key)
+        public  void Delete(Guid key)
         {
             eventUnitOfWork.Delete(key);
         }

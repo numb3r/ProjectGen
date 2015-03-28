@@ -15,10 +15,5 @@ namespace GlobalEventNepal.Domain.Services
                 defaults: new { id = RouteParameter.Optional }
             );
         }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> e5dabf91d2f1a4f47facbeaddab054328fc6aa54
     }
 }

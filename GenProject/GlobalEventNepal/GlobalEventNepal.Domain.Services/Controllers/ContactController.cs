@@ -18,12 +18,12 @@ namespace GlobalEventNepal.Domain.Services.Controllers
             this.contactUnitOfWork = contactUnitOfWork;
         }
 
-        public override IQueryable<Contact> Get()
+        public  IQueryable<Contact> Get()
         {
             return contactUnitOfWork.GetAll();
         }
 
-        public override HttpResponseMessage Post(Contact entity)
+        public  HttpResponseMessage Post(Contact entity)
         {
             if (!ModelState.IsValid)
                 return Request.CreateResponse(HttpStatusCode.BadRequest);
@@ -34,7 +34,7 @@ namespace GlobalEventNepal.Domain.Services.Controllers
             return response;
         }
 
-        public override HttpResponseMessage Put(Guid key, Contact update)
+        public  HttpResponseMessage Put(Guid key, Contact update)
         {
             if (!ModelState.IsValid)
                 return Request.CreateResponse(HttpStatusCode.BadRequest);
@@ -46,7 +46,7 @@ namespace GlobalEventNepal.Domain.Services.Controllers
             return response;
         }
 
-        public override void Delete(Guid key)
+        public  void Delete(Guid key)
         {
             contactUnitOfWork.DeleteContact(key);
         }
