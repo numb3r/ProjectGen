@@ -12,12 +12,12 @@ namespace GlobalEventNepal.Domain.Entities.Mapping
         public ContactMap()
         {
             HasKey(a => a.Id);
-            Property(p => p.FirstName).HasMaxLength(25);
-            Property(p => p.LastName).HasMaxLength(25);
-            Property(p => p.PhoneNumber).HasMaxLength(25);
-            Property(p => p.EmailAddress).HasMaxLength(225);
-
+            Property(p => p.FirstName).HasMaxLength(50);
+            Property(p => p.LastName).HasMaxLength(50);
+            
             HasMany(p => p.Addresses).WithRequired().HasForeignKey(p => p.ContactId);
+            HasMany(p => p.EmailAddresses).WithRequired().HasForeignKey(p => p.ContactId);
+            HasMany(p => p.Phones).WithRequired().HasForeignKey(p => p.ContactId);
 
             ToTable("Contacts");
         }

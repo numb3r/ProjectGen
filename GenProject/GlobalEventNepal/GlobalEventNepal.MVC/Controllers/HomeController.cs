@@ -2,19 +2,20 @@
 using System.Collections;
 using System.Linq;
 using System.Web.Mvc;
-using GlobalEventNepal.Domain.Abstract;
+using GlobalEventNepal.Domain;
+using GlobalEventNepal.Domain.Entities;
 using GlobalEventNepal.MVC.Models;
 
 namespace GlobalEventNepal.MVC.Controllers
 {
     public class HomeController : Controller
     {
-       private IEventRepository repository;
+       private IRepository<Event> eventRepository;
         public int PageSize = 4;
         
-        public HomeController(IEventRepository eventRepository)
+        public HomeController(IRepository<Event> iEventRepository)
         {
-            this.repository = eventRepository;
+            eventRepository = iEventRepository;
         }
 
         public ViewResult Index()
@@ -27,7 +28,7 @@ namespace GlobalEventNepal.MVC.Controllers
         {
             EventListViewModel model = new EventListViewModel
             {
-                Events = repository.Events
+                Events = eventRepository.GetAll()
                 .Where(p => p.Starts >= DateTime.Today)
                 .OrderBy(p => p.Starts)
                 .Skip((page - 1) * PageSize)
@@ -36,7 +37,7 @@ namespace GlobalEventNepal.MVC.Controllers
                 {
                     CurrentPage = page,
                     ItemsPerPage = PageSize,
-                    TotalItems = repository.Events.Count()
+                    TotalItems = eventRepository.GetAll().Count()
                 }
             };
             return model;

@@ -24,15 +24,24 @@ namespace GlobalEventNepal.Domain
 
         }
 
-        public DbSet<Event> Events { get; set; }
-        public DbSet<ContactAddress> ContactAddresses { get; set; }
+        // Alphabetical Order
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<ContactAddress> ContactAddresses { get; set; }
+        public DbSet<ContactEmail> ContactEmails { get; set; }
+        public DbSet<ContactPhone> ContactPhones { get; set; }
+        public DbSet<Event> Events { get; set; }
+        public DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(new EventMap());
-            modelBuilder.Configurations.Add(new ContactAddressMap());
+            // Alphabetical Order  
             modelBuilder.Configurations.Add(new ContactMap());
+            modelBuilder.Configurations.Add(new ContactAddressMap());
+            modelBuilder.Configurations.Add(new ContactEmailMap());
+            modelBuilder.Configurations.Add(new ContactPhoneMap());
+            modelBuilder.Configurations.Add(new EventMap());
+            modelBuilder.Configurations.Add(new sysdiagramMap());
+            
         }
     }
 }
