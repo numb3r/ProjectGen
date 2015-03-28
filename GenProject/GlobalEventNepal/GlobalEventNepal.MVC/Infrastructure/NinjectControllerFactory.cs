@@ -32,7 +32,7 @@ namespace GlobalEventNepal.MVC.Infrastructure
             ninjectKernel.Bind<IObjectContextAdapter>().To<GlobalEventNepalContext>();
 
             //Unit of Work Binding
-            //ninjectKernel.Bind<IEventUnitOfWork>().To<EventUnitOfWork>();
+            ninjectKernel.Bind<IRepository>().To<EFRepository>();
         }
     }
 }

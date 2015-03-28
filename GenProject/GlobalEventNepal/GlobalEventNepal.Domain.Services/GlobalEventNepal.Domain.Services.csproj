@@ -53,12 +53,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-<<<<<<< HEAD
-=======
     <Reference Include="Ninject">
       <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
     </Reference>
->>>>>>> e5dabf91d2f1a4f47facbeaddab054328fc6aa54
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -130,14 +127,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
     <Compile Include="App_Start\DIConfig.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="DependencyInjection\NinjectResolver.cs" />
     <Compile Include="DependencyInjection\NinjectScope.cs" />
->>>>>>> e5dabf91d2f1a4f47facbeaddab054328fc6aa54
     <Compile Include="Extensions\ContactExtension.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
